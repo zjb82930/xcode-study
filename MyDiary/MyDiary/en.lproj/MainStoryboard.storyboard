@@ -1,23 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Dairy View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="DairyViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MyDiary程序作者简介" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dua-9s-ht1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="214" id="Dzg-t8-P0j"/>
+                                    <constraint firstAttribute="height" constant="21" id="E3Q-o4-dNx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SWm-cO-h3Y">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="Xam-Qt-uGd"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="刘铭"/>
+                                    <segment title="猪头"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="qq：130000000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk6-mV-F9d">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="微博：liuming_cn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSu-rL-Fv9">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H1j-8j-bak">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="Lcs-cv-T0h"/>
+                                    <constraint firstAttribute="height" constant="176" id="WU4-n2-eDZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="H1j-8j-bak" secondAttribute="bottom" constant="87" id="4wA-uS-q3o"/>
+                            <constraint firstItem="SWm-cO-h3Y" firstAttribute="top" secondItem="3" secondAttribute="top" constant="93" id="6Ww-5b-rIh"/>
+                            <constraint firstItem="Dua-9s-ht1" firstAttribute="centerX" secondItem="SWm-cO-h3Y" secondAttribute="centerX" type="default" id="F9q-wA-rOG"/>
+                            <constraint firstItem="eSu-rL-Fv9" firstAttribute="top" secondItem="3" secondAttribute="top" constant="213" id="JYu-C6-NYe"/>
+                            <constraint firstItem="sk6-mV-F9d" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="42" id="R1Z-A0-UbG"/>
+                            <constraint firstItem="Dua-9s-ht1" firstAttribute="top" secondItem="3" secondAttribute="top" constant="35" id="TlC-HO-WSD"/>
+                            <constraint firstItem="eSu-rL-Fv9" firstAttribute="leading" secondItem="sk6-mV-F9d" secondAttribute="leading" type="default" id="jgE-LX-laj"/>
+                            <constraint firstItem="sk6-mV-F9d" firstAttribute="top" secondItem="3" secondAttribute="top" constant="178" id="mKp-Xx-DoM"/>
+                            <constraint firstItem="H1j-8j-bak" firstAttribute="leading" secondItem="eSu-rL-Fv9" secondAttribute="leading" type="default" id="sgl-8O-6Lj"/>
+                            <constraint firstItem="Dua-9s-ht1" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="vP1-9E-Y7U"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="DairyViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DairyViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
